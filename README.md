@@ -1,3 +1,3 @@
 #Сайт по КП Угарина Никиты
-Hello, World!
+Hello, World.
 
