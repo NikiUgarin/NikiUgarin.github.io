@@ -4,16 +4,24 @@ body {
     color: #343a40;
 }
 
+@font-face {
+    font-family: 'PaluiFont';
+    src: url('../fonts/PaluiSPDemo-Bold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+ }
+
 .site-header {
     background-color: #fff;
     border-bottom: 1px solid #eee;
 }
 
 .site-header-name {
-    font-size: 1.8rem;
-    color: #333;
-    text-decoration: none;
-}
+     font-family: 'PaluiFont', sans-serif;
+     font-size: 1.8rem;
+     color: #333;
+     text-decoration: none;
+ }
 
 .nav-bar {
     background-color: #fff;
