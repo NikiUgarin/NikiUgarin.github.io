@@ -1,0 +1,154 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
+}
+
+@font-face {
+    font-family: 'PaluiFont';
+    src: url('../fonts/PaluiSPDemo-Bold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+ }
+
+.site-header {
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.site-header-name {
+     font-family: 'PaluiFont';
+     font-size: 2.8rem;
+     text-align: center;
+     color: #000000;
+     text-decoration: none;
+ }
+
+.nav-bar {
+    font-family: 'PaluiFont', sans-serif;
+    font-size: 0.8rem;
+    color: #3f3f3f;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    margin-bottom: 30px;
+}
+
+
+.nav {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-link {
+    padding: 15px 20px;
+    color: #495057;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    background-color: #e9ecef;
+    color: #007bff;
+}
+
+.blog-post {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    margin-bottom: 20px;
+}
+
+.blog-post-title {
+    font-family: 'PaluiFont';
+    font-size: 1.3rem;
+    text-align: center;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.blog-text {
+    font-family: 'PaluiFont';
+    font-size: 0.8rem;
+    text-align: justify;
+    line-height: 1.8;
+    color: #3f3f3f;
+    margin-bottom: 15px;
+}
+
+.blog-text-center {
+    font-family: 'PaluiFont';
+    font-size: 0.8rem;
+    text-align: center;
+    line-height: 1.8;
+    color: #3f3f3f;
+    margin-bottom: 15px;
+}
+
+.aligncenter {
+    text-align: center;
+}
+
+.card {
+    border: none;
+}
+
+aside h4 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.myworksheader {
+    font-family: 'PaluiFont';
+    font-size: 1.8rem;
+    text-align: center;
+    color: #3f3f3f;
+}
+
+.links {
+    font-family: 'PaluiFont';
+    font-size: 1.0rem;
+    text-align: center;
+    line-height: 2.0;
+    color: #3f3f3f;
+}
+
+.list-unstyled li a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.list-unstyled li a:hover {
+    color: #0056b3;
+}
+
+.site-footer {
+    font-family: 'PaluiFont', sans-serif;
+    background-color: #343a40;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+.card:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
+.textcols {
+	white-space: nowrap;
+}
+.textcols-item {
+	white-space: normal;	
+	display: inline-block;
+	width: 48%;
+	vertical-align: top;
+	background: #ffffff;
+}
+.textcols .textcols-item:first-child {
+	margin-right: 4%;
+}
