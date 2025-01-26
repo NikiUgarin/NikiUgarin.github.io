@@ -11,6 +11,13 @@ body {
     font-style: normal;
  }
 
+@font-face {
+    font-family: 'GostB';
+    src: url('../fonts/GOST-type-B.TTF') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+ }
+
 .site-header {
     background-color: #fff;
     border-bottom: 1px solid #eee;
@@ -49,7 +56,7 @@ body {
 
 .nav-link:hover {
     background-color: #e9ecef;
-    color: #007bff;
+    color: #ff9101;
 }
 
 .blog-post {
@@ -69,20 +76,34 @@ body {
 }
 
 .blog-text {
-    font-family: 'PaluiFont';
-    font-size: 0.8rem;
+    font-family: 'GostB';
+    font-size: 1.8rem;
     text-align: justify;
-    line-height: 1.8;
-    color: #3f3f3f;
+    line-height: 1.3;
+    margin-left: 10%;
+    font-weight: 700;
+    color: #555555;
     margin-bottom: 15px;
 }
 
 .blog-text-center {
-    font-family: 'PaluiFont';
-    font-size: 0.8rem;
+    font-family: 'GostB';
+    font-size: 1.8rem;
     text-align: center;
-    line-height: 1.8;
-    color: #3f3f3f;
+    line-height: 1.3;
+    font-weight: 700;
+    margin-left: 10%;
+    color: #555555;
+    margin-bottom: 15px;
+}
+
+.blog-text-center2 {
+    font-family: 'GostB';
+    font-size: 1.8rem;
+    text-align: center;
+    line-height: 1.3;
+    font-weight: 700;
+    color: #555555;
     margin-bottom: 15px;
 }
 
@@ -115,13 +136,13 @@ aside h4 {
 }
 
 .list-unstyled li a {
-    color: #007bff;
+    color: #00570e;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .list-unstyled li a:hover {
-    color: #0056b3;
+    color: #00570e;
 }
 
 .site-footer {
