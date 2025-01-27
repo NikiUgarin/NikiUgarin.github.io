@@ -56,7 +56,7 @@ body {
 
 .nav-link:hover {
     background-color: #e9ecef;
-    color: #ff9101;
+    color: #256777;
 }
 
 .blog-post {
@@ -80,7 +80,7 @@ body {
     font-size: 1.8rem;
     text-align: justify;
     line-height: 1.3;
-    margin-left: 10%;
+    margin-left: 20%;
     font-weight: 700;
     color: #555555;
     margin-bottom: 15px;
@@ -105,6 +105,18 @@ body {
     font-weight: 700;
     color: #555555;
     margin-bottom: 15px;
+}
+
+.blog-text-footer {
+    font-family: 'GostB';
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    background-color: #343a40;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
 }
 
 .aligncenter {
@@ -145,15 +157,6 @@ aside h4 {
     color: #00570e;
 }
 
-.site-footer {
-    font-family: 'PaluiFont', sans-serif;
-    background-color: #343a40;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 30px;
-}
-
 .card:hover {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
     transform: translateY(-2px);
@@ -163,13 +166,21 @@ aside h4 {
 .textcols {
 	white-space: nowrap;
 }
-.textcols-item {
+.textcols-item-left {
 	white-space: normal;	
 	display: inline-block;
-	width: 48%;
+	width: 58%;
 	vertical-align: top;
 	background: #ffffff;
 }
-.textcols .textcols-item:first-child {
+.textcols-item-right {
+	white-space: normal;	
+	display: inline-block;
+	width: 38%;
+	vertical-align: top;
+	background: #ffffff;
+}
+
+.textcols .textcols-item-left:first-child {
 	margin-right: 4%;
 }
