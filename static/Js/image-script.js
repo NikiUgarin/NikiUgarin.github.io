@@ -1,5 +1,5 @@
 const myphoto = document.getElementById('myphoto');
-let currentImage = 'static/img/myphoto2_anonymized.png';
+let currentImage = 'static/img/myphoto2.png';
 
 myphoto.addEventListener('click', () => {
     // Добавляем класс "rotating" для запуска анимации
@@ -7,12 +7,12 @@ myphoto.addEventListener('click', () => {
 
     // Функция для изменения изображения после завершения анимации
     const onAnimationEnd = () => {
-        if (currentImage === 'static/img/myphoto2_anonymized.png') {
+        if (currentImage === 'static/img/myphoto2.png') {
             myphoto.src = 'static/img/myphoto2.jpg';
             currentImage = 'static/img/myphoto2.jpg';
         } else {
-            myphoto.src = 'static/img/myphoto2_anonymized.png';
-            currentImage = 'static/img/myphoto2_anonymized.png';
+            myphoto.src = 'static/img/myphoto2.png';
+            currentImage = 'static/img/myphoto2.png';
         }
 
         // Удаляем класс "rotating" после завершения анимации
