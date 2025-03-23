@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="My Resume">
+    <meta name="author" content="Nikita Ugarin">
+    <link rel="icon" href="../static/img/LOGO2.png">
+
+    <title>Ugarin Nikita - Resume</title>
+
+    <!-- Custom CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/custom.css">
+    <style>
+        .resume-button {
+            width: 100%;
+            padding: 25px;
+            margin: 20px 0;
+            background-color: #fff3e0;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.5em;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            display: block;
+            text-decoration: none;
+            color: #333;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .resume-button:hover {
+            background-color: #ffe0b2;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .resume-button:active {
+            transform: translateY(-1px);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+
+        .resume-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .resume-description {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #666;
+            font-size: 1.1em;
+        }
+
+        .resume-button::after {
+            content: '→';
+            position: absolute;
+            right: -20px;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .resume-button:hover::after {
+            right: 20px;
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <main role="main" class="container">
+
+        <!-- HEADER -->
+        <header class="site-header py-3">
+            <div class="row flex-nowrap justify-content-between align-items-center">
+                <div class="col pt-1">
+                    <a class="site-header-name" href="../">
+                        <h1 class="site-header-name">Угарин Никита Александрович</h1>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <!-- END HEADER -->
+
+        <!-- NAVIGATION -->
+        <nav class="nav-bar">
+            <div class="container nav">
+                <a class="nav-link" href="../">Главная</a>
+                <a class="nav-link" href="../blog/">О себе</a>
+                <a class="nav-link" href="../single-column/">Работы в вузе</a>
+                <a class="nav-link" href="../single-column-html/">Blender</a>
+                <a class="nav-link" href="./">Резюме RU/ENG</a>
+            </div>
+        </nav>
+        <!-- END NAVIGATION -->
+
+        <div class="resume-container">
+            <h1 class="myworksheader">Resume</h1>
+            <p class="resume-description">Click the button below to view my resume</p>
+            
+            <a href="../static/pdf/resume_eng.pdf" class="resume-button" target="_blank">
+                View Resume in English
+            </a>
+        </div>
+
+    </main>
+
+    <footer class="blog-text-footer">
+        copyright 2025 Ugarin N.A.
+    </footer>
+</body>
+</html>

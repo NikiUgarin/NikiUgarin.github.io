@@ -13,6 +13,102 @@
   <!-- Custom CSS -->
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../static/css/custom.css">
+  <style>
+    @font-face {
+      font-family: 'GOST-type-B';
+      src: url('../static/fonts/GOST-type-B.TTF') format('truetype');
+    }
+
+    .course-button, .subject-button {
+      width: 100%;
+      padding: 15px;
+      margin: 10px 0;
+      background-color: #f8f9fa;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.2em;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      text-align: left;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .subject-button {
+      font-size: 1em;
+      padding: 10px;
+      margin: 5px 0;
+      background-color: #ffffff;
+      transform-origin: top;
+      opacity: 0.9;
+    }
+
+    .course-button:hover, .subject-button:hover {
+      background-color: #e9ecef;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+
+    .course-content, .subject-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      margin-left: 20px;
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+
+    .course-content.active {
+      max-height: 2000px;
+      margin-bottom: 20px;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .subject-content.active {
+      max-height: 1000px;
+      margin-bottom: 10px;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .course-button::before, .subject-button::before {
+      content: '▶';
+      display: inline-block;
+      margin-right: 10px;
+      transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      color: #666;
+    }
+
+    .course-button.active::before, .subject-button.active::before {
+      transform: rotate(90deg);
+      color: #333;
+    }
+
+    .course-button.active, .subject-button.active {
+      background-color: #f0f0f0;
+      border-left: 3px solid #007bff;
+    }
+
+    .links {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .links a {
+      font-family: 'GOST-type-B', sans-serif;
+      font-size: 1.1em;
+      transition: all 0.3s ease;
+      position: relative;
+      display: inline-block;
+      color: #0056b3;
+      text-decoration: none;
+    }
+
+    .links a:hover {
+      transform: translateX(5px);
+      color: #003d7a;
+    }
+  </style>
 </head>
 
 <body>
@@ -43,38 +139,244 @@
     <!-- END NAVIGATION -->
 
     <div class="row">
-
       <!-- MAIN BODY -->
       <div class="col-md-12">
-
         <!-- Portfolio Content -->
         <div class="card shadow p-3 mb-4">
             <h1 class="myworksheader">Мои работы</h1>
-            <ul class="links">
-                <li><a href="https://github.com/Nikitos1408/PortfolioProg"><U>Лабораторные работы по программированию</U></a></li>
-                <li><a href="https://github.com/Nikitos1408/VT-and-OS"><U>Лабораторные работы по выч-технике и опер-системам</U></a></li>
-                <li><a href="https://github.com/Nikitos1408/Database"><U>Лабораторные работы по базам данных</U></a></li>
-                <li><a href="https://github.com/Nikitos1408/CompPract"><U>Лабораторные работы по компьютерной практике</U></a></li>
-                <li><a href="https://github.com/Nikitos1408/UCHEBA"><U>Лабораторные работы по мат-основам комп-графики</U></a></li>
-                <li><a href="https://github.com/Nikitos1408/Practice2023"><U>Практика сентябрь (второй курс)</U></a></li>
-            </ul>
+            
+            <!-- Первый курс -->
+            <button class="course-button">Первый курс</button>
+            <div class="course-content">
+              <!-- ИТ в математике -->
+              <button class="subject-button">ИТ в математике</button>
+              <div class="subject-content">
+                <ul class="links">
+                  <li><a href="https://drive.google.com/drive/folders/1Ey8xG3v7LZr2hBpCFmpOtgeJXUDE1GT_?usp=sharing"><U>Тема 1. Л.Р. №1</U></a></li>
+                  <li><a href="https://drive.google.com/drive/folders/1gJdDcDKctPc55Pab9DxE-bsK0e9Klx7F?usp=sharing"><U>Тема 1. ВСР</U></a></li>
+                  <li><a href="https://drive.google.com/drive/folders/1CZzN2hhJZKKm6XqagpV67LiBeKvVFXH5?usp=sharing"><U>Тема 1. ИСР</U></a></li>
+                  <li><a href="https://drive.google.com/drive/folders/14oULOv-Ara7eEZVnxNH_Sbr21WClr1ah?usp=sharing"><U>Тема 2. Л.Р. (графики)</U></a></li>
+                  <li><a href="https://drive.google.com/drive/folders/141jMMdxeYfw-VvmKrnCc8z3VVOmZAKh0?usp=sharing"><U>Тема 2. ИСР (графики)</U></a></li>
+                  <li><a href="https://drive.google.com/drive/folders/1ehu5wlMViNbrajZYJKrgI3efeehkVE2d?usp=sharing"><U>Тема 2. Л.Р. (марицы)</U></a></li>
+                  <li><a href="https://drive.google.com/drive/folders/1zELTA_mJgmsrm4nVY2lQ5s4d5HzK0KKf?usp=sharing"><U>Тема 2. ИСР (матрицы)</U></a></li>
+                  <li><a href="https://drive.google.com/drive/folders/1QD5J2y30knEO4H_81ZgJOeKyP9L6Ecn1?usp=sharing"><U>Тема 2. ИСР (общая)</U></a></li>
+                  <li><a href="https://drive.google.com/drive/folders/18mzM3Eq9emO-PLV1tlVCzlYGsPFMSg6B?usp=sharing"><U>Тема 2. ВСР</U></a></li>
+                  <li><a href="https://drive.google.com/drive/folders/1t9m1MibastcvUBm4sNKFAShW45WTGwbl?usp=sharing"><U>Тема 3. Л.Р. №3</U></a></li>
+                  <li><a href="https://drive.google.com/drive/folders/13NByZct--fljlO1v3_KILy4uSVGyZDM3?usp=sharing"><U>Тема 3. ИСР</U></a></li>
+                  <li><a href="https://drive.google.com/drive/folders/1FUYdDXa3KeqK8Qhc268rSYNuyvLDvwc3?usp=sharing"><U>Тема 3. ВСР</U></a></li>
+                  <li><a href="https://drive.google.com/drive/folders/1alG0d8W4fuS81od8HbwwR2In80eiJtby?usp=share_link"><U>Тема 4. Л.Р. №4</U></a></li>
+                  <li><a href="https://drive.google.com/drive/folders/19a9T4BTd0rj5AsVis8juy6pM6nTIfioq?usp=share_link"><U>Тема 4. ИСР</U></a></li>
+                  <li><a href="https://drive.google.com/drive/folders/1rjIuknVSGtAfDBDPPVmpm8UlWX1FgmFr?usp=share_link"><U>Тема 4. ВСР</U></a></li>
+                  <li><a href="https://drive.google.com/drive/folders/1HIMAbFZ0OdGje_Yq8ZMGMlJ6rTltfvC0?usp=share_link"><U>Тема 5. Л.Р. №5</U></a></li>
+                  <li><a href="https://drive.google.com/drive/folders/1kYu-luZGMVpLQd8SbZ-7f9sb3oGBwCn-?usp=share_link "><U>Тема 5. ИСР</U></a></li>
+                  <li><a href="https://drive.google.com/drive/folders/1rS1HhPeUqh5WezcC4qMDtYvYiVZeP00P?usp=share_link"><U>Тема 5. ВСР</U></a></li>
+                  <li><a href="https://drive.google.com/drive/folders/1tbNTFOwJc3IbpoOTL-WHeFotYf9FpZZk?usp=share_link"><U>Тема 6. Л.Р. №6</U></a></li>
+                  <li><a href="https://drive.google.com/drive/folders/1PK2ftQBLJXSbK8vpTLPeMkbFnzlJ1-JH?usp=share_link"><U>Тема 6. ИСР</U></a></li>
+                  <li><a href="https://drive.google.com/drive/folders/10W7-9wji6HVWlsIxGhbntT9Y8W9WnWjK?usp=share_link "><U>Тема 6. ВСР</U></a></li>
+                </ul>
+              </div>
+              <!-- Информатика -->
+              <button class="subject-button">Информатика</button>
+              <div class="subject-content">
+                <ul class="links">
+                  <li><a href="https://drive.google.com/drive/folders/104QRdcbBdaONhIvQ5JIcclDaw2153Cxx?usp=sharing"><U>Л.Р. №1</U></a></li>
+                  <li><a href="https://drive.google.com/drive/folders/1mR-PIo99WQbvPx9CrPESvNj5ijuqh1vF?usp=sharing"><U>Л.Р. №2</U></a></li>
+                  <li><a href="https://drive.google.com/drive/folders/1KRJM54smVHLkGJzrZNO9GIf92sYPYFAs?usp=sharing"><U>Л.Р. №3</U></a></li>
+                  <li><a href="https://drive.google.com/drive/folders/1H_BVs51Mbc8KI69lbX1iBQzHHxXsC15M?usp=sharing"><U>Л.Р. №4-5</U></a></li>
+                  <li><a href="https://drive.google.com/drive/folders/1EsAMIAYczgYoFIQ177cOJhQOU0eeFhoc?usp=sharing"><U>Л.Р. №6</U></a></li>
+                  <li><a href="https://drive.google.com/drive/folders/1kbH5ne7EP0X11vXonOPkqZjdES_WYXxX?usp=sharing"><U>Л.Р. №7</U></a></li>
+                  <li><a href="https://drive.google.com/drive/folders/1hbaJhBlYnyXQ7DRJwJh1ktdF6DUkvnLR?usp=share_link"><U>Л.Р. №8</U></a></li>
+                  <li><a href="https://drive.google.com/drive/folders/1aSsarN-35cYu-sOSfVfaPTECFMHPA6CD?usp=share_link"><U>Л.Р. №9</U></a></li>
+                  <li><a href="https://drive.google.com/drive/folders/1-fU164fjhv37WO1zkZxkMgAi0a_VI3nz?usp=share_link"><U>Л.Р. №10</U></a></li>
+                  <li><a href="https://drive.google.com/drive/folders/1hcCHmQb8aXxw9zinHPr8lDT7_HENznUO?usp=share_link"><U>Л.Р. №11</U></a></li>
+                  <li><a href="https://drive.google.com/drive/folders/1Ikv59wTLtBOU6yZqbR0RtAVryDq71QwV?usp=share_link"><U>Л.Р. №12</U></a></li>
+                  <li><a href="https://drive.google.com/drive/folders/1GiRgOY9MEO-YDipXOqpL9dfchK7Wx6DC?usp=sharing"><U>Лекция 1</U></a></li>
+                  <li><a href="https://drive.google.com/drive/folders/1ToC1tRjbvIrrQsoPwzO-6eTCnL312Q-z?usp=sharing"><U>Лекция 2</U></a></li>
+                  <li><a href="https://drive.google.com/drive/folders/1J4GnHMzbQCFjT38BShnrNX2rZUXoqmMP?usp=sharing "><U>Лекция 3</U></a></li>
+                  <li><a href="https://drive.google.com/drive/folders/1_bfECgbzaKdxXwiYPQ_NdJ0vjQgSjUuf?usp=share_link"><U>C.Р.</U></a></li>
+                </ul>
+              </div>
+              <!-- дискретная математика -->
+              <button class="subject-button">Дискретная математика</button>
+              <div class="subject-content">
+                <ul class="links">
+                  <li><a href="https://drive.google.com/drive/folders/16-eEi71FLMTiv8Pz-4Wf04nev1OsNPhA?usp=sharing"><U>Множества и отношения 1</U></a></li>
+                  <li><a href="https://drive.google.com/drive/folders/1uIwJZmxfPxoRjK6jFeHW3He-KC2Cpraf?usp=share_link"><U>Множества и отношения 2</U></a></li>
+                  <li><a href="https://drive.google.com/drive/folders/1jT96wA_ugVcyOCm9l_OHJe7OXm82aneP?usp=share_link"><U>Множества и отношения 3</U></a></li>
+                </ul>
+              </div>
+              <!-- ИТ в Физике -->
+              <button class="subject-button">ИТ в физике</button>
+              <div class="subject-content">
+                <ul class="links">
+                  <li><a href="https://drive.google.com/drive/folders/1a-l1gCJj_io9JvDg5giYZg_o7s8rVRPl?usp=sharing"><U>Л.Р. №1.1</U></a></li>
+                  <li><a href="https://drive.google.com/drive/folders/1eNcrjCcpeP4_I2lOWG0e9-_QXpUpxDq0?usp=sharing"><U>Л.Р. №1.2</U></a></li>
+                  <li><a href="https://drive.google.com/drive/folders/1nYkqTXn9cqnrzdhAnT-JMgao-Gyfe1RL?usp=sharing"><U>Л.Р. №3</U></a></li>
+                  <li><a href="https://drive.google.com/drive/folders/1Z465ZXWnJXZG_hFdh_XC1izogS80D3wq?usp=share_link"><U>Л.Р. №4</U></a></li>
+                  <li><a href="https://drive.google.com/drive/folders/1G-c4-2wgsKZigWUTWI1Uzxd941HlFOgE?usp=share_link"><U>Л.Р. №5</U></a></li>
+                  <li><a href="https://drive.google.com/drive/folders/1p_SN8AdNdU3sPxJN7fVt4VUISEacTRlR?usp=share_link"><U>Л.Р. №6</U></a></li>
+                </ul>
+              </div>
+              <!-- ОКА -->
+              <button class="subject-button">ОКА</button>
+              <div class="subject-content">
+                <ul class="links">
+                  <li><a href="https://drive.google.com/drive/folders/1iRiX3LSJO2x3JKVC_3JzkmQZ6_zs_EWV?usp=sharing"><U>Тема 1. Л.Р. №1.1</U></a></li>
+                  <li><a href="https://drive.google.com/drive/folders/1Y35MQ0Qp4zkLNkZzc7ysfbnW51jtH2QY?usp=sharing"><U>Тема 1. Л.Р. №1.2</U></a></li>
+                  <li><a href="https://drive.google.com/drive/folders/1WBGFySe8DyRK2EL0T96tQWEV5bImO6bi?usp=sharing"><U>Тема 1. Л.Р. №1.3</U></a></li>
+                  <li><a href="https://drive.google.com/drive/folders/1IJKbDaFv_9OGGh-3CWZrrBAil0moS5hu?usp=sharing"><U>Тема 1. ИСР</U></a></li>
+                  <li><a href="https://drive.google.com/drive/folders/1Zht3nuJ_ZT5uPfnbAfLCuUe-gnkl0nN4?usp=sharing"><U>Тема 1. ВСР</U></a></li>
+                  <li><a href="https://drive.google.com/drive/folders/1w8RkauiLd3fIOz3RCbCyc7zPsaVsyHqi?usp=sharing"><U>Тема 2. Л.Р. №2</U></a></li>
+                  <li><a href="https://drive.google.com/drive/folders/1uvrlJpLkWyMRUjaiTfSykIViNhTRMHrD?usp=share_link"><U>Тема 2. ИСР</U></a></li>
+                  <li><a href="https://drive.google.com/drive/folders/14RTkJxTlHb__bPndvyeV02AxLMODvfJV?usp=share_link"><U>Тема 2. ВСР</U></a></li>
+                  <li><a href="https://drive.google.com/drive/folders/1sm4AYT_bA9d4r2hFPqAxGXFfQsFACASV?usp=share_link"><U>Тема 3. Л.Р. №3</U></a></li>
+                  <li><a href="https://drive.google.com/drive/folders/1AvOrOgMwI8Pk3fTsKA_JwAwgmLk6d3qL?usp=share_link"><U>Тема 3. ВСР</U></a></li>
+                  <li><a href="https://drive.google.com/drive/folders/1zv79mfRuOnMxaJP-S_l7rK9qYCa42UT3?usp=share_link"><U>Тема 3. ИСР</U></a></li>
+                </ul>
+              </div>
+              <!-- Латм -->
+              <button class="subject-button">ЛАТМ</button>
+              <div class="subject-content">
+                <ul class="links">
+                  <li><a href="https://drive.google.com/drive/folders/1GTVl1XKITd93bR3HMm_-eDPEzB10S9PZ?usp=share_link"><U>Тема 1. ВСР</U></a></li>
+                  <li><a href="https://drive.google.com/drive/folders/1JkGFdPow_kU2IhJRJryG1X9weHXqQc32?usp=share_link"><U>Тема 1. ИСР</U></a></li>
+                  <li><a href="https://drive.google.com/drive/folders/1-EjF0gVRDL9qMfTPU6BU8lWRRS3Lrc_k?usp=share_link"><U>Тема 2. ВСР</U></a></li>
+                  <li><a href="https://drive.google.com/drive/folders/1wIODEh4IsqzgNhqrQBhLzfdkr30IhMS6?usp=share_link"><U>Тема 2. ИСР</U></a></li>
+                  <li><a href="https://drive.google.com/drive/folders/1RCvFKfbemnddPlPVJA5PIl4mGgfUtVEP?usp=share_link"><U>Тема 3. ВСР</U></a></li>
+                  <li><a href="https://drive.google.com/drive/folders/1GqKSj1LHid1anUW2MA15Eo6VgOCP2xhM?usp=share_link"><U>Тема 3. ИСР</U></a></li>
+                </ul>
+              </div>
+              <!-- ИТ-->
+              <button class="subject-button">ИТ</button>
+              <div class="subject-content">
+                <ul class="links">
+                  <li><a href="https://drive.google.com/drive/folders/1phCZIHz0xbl5ozQXXQo3xUiyb3RqMzvM?usp=share_link"><U>Л.Р. №1</U></a></li>
+                  <li><a href="https://drive.google.com/drive/folders/1umGBvIsWXVjFN8g_OZFw3oAyptzAGJ7z?usp=share_link"><U>Л.Р. №2</U></a></li>
+                  <li><a href="https://drive.google.com/drive/folders/13pYJ6ei_l7DBwsxYpDAhE2A8yjf0CpzL?usp=share_link"><U>Л.Р. №3</U></a></li>
+                  <li><a href="https://youtu.be/2y50AukmnCI"><U>Инстант мессенджеры 1 сем.</U></a></li>
+                  <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSd45iQwFhquxhpuP8S_f-o8bhyjqiiCAGrd9_BLVxwQK_YVSw/viewform?pli=1"><U>Гугл форма 1 сем.</U></a></li>
+                  <li><a href="https://youtu.be/StpgtcSIv_M"><U>Доклад 2 сем.</U></a></li>
+                  <li><a href="https://forms.gle/ANyxbDeMRmKdZEnq7"><U>Гугл форма 2 сем.</U></a></li>
+                  <li><a href="https://youtu.be/AexXCos2U8I"><U>Л.Р. №4</U></a></li>
+                  <li><a href="https://drive.google.com/drive/folders/1pR9bmCLxsBBxJZrC_agk06nNTQCPcfSH?usp=sharing"><U>Л.Р. №11</U></a></li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Второй курс -->
+            <button class="course-button">Второй курс</button>
+            <div class="course-content">
+              <!-- Программирование -->
+              <button class="subject-button">Программирование</button>
+              <div class="subject-content">
+                <ul class="links">
+                  <li><a href="https://raw.githubusercontent.com/Nikitos1408/PortfolioProg/refs/heads/main/LR-Ugarin%204sem"><U>Лабораторные работы 3-4 сем.</U></a></li>
+                </ul>
+              </div>
+              <!-- Вычислительная техника -->
+              <button class="subject-button">Вычислительная техника</button>
+              <div class="subject-content">
+                <ul class="links">
+                  <li><a href="https://github.com/Nikitos1408/VT-and-OS"><U>Лабораторные работы по выч-технике и опер-системам</U></a></li>
+                </ul>
+              </div>
+              <!-- Практика -->
+              <button class="subject-button">Практика</button>
+              <div class="subject-content">
+                <ul class="links">
+                  <li><a href="https://github.com/Nikitos1408/Practice2023"><U>Практика сентябрь (второй курс)</U></a></li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Третий курс -->
+            <button class="course-button">Третий курс</button>
+            <div class="course-content">
+              <!-- Базы данных -->
+              <button class="subject-button">Базы данных</button>
+              <div class="subject-content">
+                <ul class="links">
+                  <li><a href="https://github.com/Nikitos1408/Database"><U>Лабораторные работы по базам данных</U></a></li>
+                </ul>
+              </div>
+              <!-- Компьютерная графика -->
+              <button class="subject-button">Компьютерная графика</button>
+              <div class="subject-content">
+                <ul class="links">
+                  <li><a href="https://github.com/Nikitos1408/UCHEBA"><U>Лабораторные работы по мат-основам комп-графики</U></a></li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Четвертый курс -->
+            <button class="course-button">Четвертый курс</button>
+            <div class="course-content">
+              <!-- Пока пусто -->
+              <button class="subject-button">Предметы еще не определены</button>
+              <div class="subject-content">
+                <ul class="links">
+                  <li><a href="#"><U>Пока нет работ</U></a></li>
+                </ul>
+              </div>
+            </div>
+
         </div>
         <!-- END Portfolio Content -->
-
       </div>
       <!-- END MAIN BODY -->
-
     </div>
   </main>
 
-  <footer class="site-footer">
-    copyright - Ugarin N A
+  <footer class="blog-text-footer">
+    copyright 2025 Ugarin N.A.
   </footer>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-    crossorigin="anonymous"></script>
+
+  <script>
+    // Обработчик для кнопок курсов и предметов
+    document.querySelectorAll('.course-button, .subject-button').forEach(button => {
+      button.addEventListener('click', (e) => {
+        e.stopPropagation(); // Предотвращаем всплытие события
+        const content = button.nextElementSibling;
+        const isActive = content.classList.contains('active');
+        
+        // Если это кнопка курса, закрываем все
+        if (button.classList.contains('course-button')) {
+          document.querySelectorAll('.course-content, .subject-content').forEach(item => {
+            item.classList.remove('active');
+          });
+          document.querySelectorAll('.course-button, .subject-button').forEach(btn => {
+            btn.classList.remove('active');
+          });
+        } else {
+          // Если это кнопка предмета, закрываем только другие предметы в этом курсе
+          const courseContent = button.closest('.course-content');
+          courseContent.querySelectorAll('.subject-content').forEach(item => {
+            if (item !== content) {
+              item.classList.remove('active');
+            }
+          });
+          courseContent.querySelectorAll('.subject-button').forEach(btn => {
+            if (btn !== button) {
+              btn.classList.remove('active');
+            }
+          });
+        }
+
+        // Открываем текущий блок, если он был закрыт
+        if (!isActive) {
+          content.classList.add('active');
+          button.classList.add('active');
+          
+          // Если открываем предмет, убеждаемся что родительский курс тоже открыт
+          if (button.classList.contains('subject-button')) {
+            const courseContent = button.closest('.course-content');
+            const courseButton = courseContent.previousElementSibling;
+            courseContent.classList.add('active');
+            courseButton.classList.add('active');
+          }
+        }
+      });
+    });
+  </script>
 </body>
 </html>
