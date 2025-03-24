@@ -97,6 +97,17 @@ body {
     color: #555555;
 }
 
+.blog-text-title {
+    font-family: 'GostB';
+    font-size: 2.3rem;
+    text-align: justify;
+    line-height: 1.8;
+    font-weight: 800;
+    margin-left: 10%;
+    margin-right: 10%;
+    color: #555555;
+}
+
 /* Стили для центрированного текста с отступом слева */
 .blog-text-mainwindow {
     font-family: 'GostB';
@@ -111,12 +122,15 @@ body {
 /* Стили для полностью центрированного текста */
 .blog-text-center {
     font-family: 'GostB';
-    font-size: 1.8rem;
+    font-size: 2.3rem;
     text-align: left;
-    line-height: 1.3;
-    font-weight: 700;
+    line-height: 1.8;
+    font-weight: 800;
     color: #555555;
+    margin-left: 10%;
+    margin-right: 10%;
     margin-bottom: 15px;
+    text-align: center;
 }
 
 /* Стили для футера */
@@ -484,4 +498,41 @@ aside h4 {
 
 .modal-content {
     animation: modalFadeIn 0.3s ease;
+}
+
+/* Стили для контактов */
+.contacts-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-5px);
+}
+
+.contact-link {
+    font-family: 'GostB', sans-serif;
+    font-size: 1.2rem;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+@media (max-width: 576px) {
+    .contacts-container {
+        grid-template-columns: 1fr;
+    }
 }
