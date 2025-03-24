@@ -115,7 +115,7 @@
   <!-- Модальное окно -->
   <div class="modal-overlay" id="imageModal">
     <div class="modal-content">
-      <button class="modal-close" onclick="closeModal()">×</button>
+      <button class="modal-close" onclick="window.closeModal()">×</button>
       <h3 class="modal-title" id="modalTitle"></h3>
       <img class="modal-image" id="modalImage" src="" alt="">
     </div>
@@ -126,7 +126,15 @@
   </footer>
 
   <!-- Подключение JavaScript -->
-  <script src="../static/js/modal.js"></script>
+  <script src="/static/js/modal.js" onerror="console.error('Ошибка загрузки скрипта modal.js')"></script>
+  <script>
+    // Проверяем, что скрипт загрузился
+    window.addEventListener('load', function() {
+      if (typeof window.closeModal !== 'function') {
+        console.error('Функция closeModal не найдена. Скрипт modal.js мог не загрузиться.');
+      }
+    });
+  </script>
 
 </body>
 
