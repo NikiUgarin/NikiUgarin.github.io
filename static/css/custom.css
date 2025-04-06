@@ -536,3 +536,179 @@ aside h4 {
         grid-template-columns: 1fr;
     }
 }
+
+.resume-buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem auto;
+    max-width: 1000px;
+}
+
+.resume-button {
+    flex: 1;
+    padding: 25px;
+    background-color: #929292;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+    min-width: 300px;
+}
+
+.resume-button:hover {
+    background-color: #424242;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.resume-button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.resume-button::after {
+    content: '→';
+    position: absolute;
+    right: -20px;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.resume-button:hover::after {
+    right: 20px;
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .resume-buttons-container {
+        flex-direction: column;
+        padding: 0 1rem;
+    }
+
+    .resume-button {
+        width: 100%;
+        min-width: auto;
+    }
+}
+
+/* Контейнер приложения */
+.app-container {
+    display: flex;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.app-info {
+    flex: 0 0 60%;
+    padding-right: 2rem;
+}
+
+.app-gallery {
+    flex: 0 0 40%;
+    min-width: 300px;
+    max-width: 40%;
+    overflow: hidden;
+}
+
+/* Стили для слайдера */
+.slider-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    width: 90%;
+    margin-bottom: 2rem;
+    margin-top: 5rem;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.slide {
+    min-width: 100%;
+    height: 300px;
+    flex-shrink: 0;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide img {
+    width: 80%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Стили для точек навигации */
+.slider-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.5rem;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background: white;
+}
+
+/* Стили для кнопки скачивания */
+.download-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+    margin-right: 10%;
+}
+
+.download-button {
+    display: inline-block;
+    padding: 1.5rem 3rem;
+    background-color: #929292;
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    font-family: 'GostB', sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    min-width: 300px;
+}
+
+.download-button:hover {
+    background-color: #424242;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 992px) {
+    .download-button {
+        width: 100%;
+        max-width: 400px;
+        font-size: 1.3rem;
+        padding: 1.2rem 2rem;
+    }
+}
