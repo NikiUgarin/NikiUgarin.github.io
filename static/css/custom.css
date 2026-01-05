@@ -105,7 +105,17 @@ body {
     font-weight: 800;
     margin-left: 10%;
     margin-right: 10%;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
     color: #555555;
+    padding-top: 2rem;
+    border-top: 2px solid #e9ecef;
+}
+
+.blog-text-title:first-of-type {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
 }
 
 /* Стили для центрированного текста с отступом слева */
@@ -246,6 +256,9 @@ aside h4 {
     gap: 12px;
     padding: 10px 0;
     width: 100%;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: calc(100% - 20%);
 }
 
 /* Стили для карточки навыка */
@@ -506,8 +519,8 @@ aside h4 {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     margin-top: 2rem;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .contact-item {
@@ -534,6 +547,14 @@ aside h4 {
 @media (max-width: 576px) {
     .contacts-container {
         grid-template-columns: 1fr;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    
+    .skills-container {
+        margin-left: 5%;
+        margin-right: 5%;
+        width: calc(100% - 10%);
     }
 }
 
@@ -710,5 +731,242 @@ aside h4 {
         max-width: 400px;
         font-size: 1.3rem;
         padding: 1.2rem 2rem;
+    }
+}
+
+/* Стили для опыта работы */
+.experience-item {
+    margin-bottom: 2rem;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #44a1b8;
+}
+
+.experience-position {
+    font-family: 'GostB';
+    font-size: 2rem;
+    font-weight: 800;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.experience-period {
+    font-family: 'GostB';
+    font-size: 1.5rem;
+    color: #666;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.experience-list {
+    margin-top: 1rem;
+}
+
+.experience-list li {
+    margin-bottom: 0.8rem;
+}
+
+/* Стили для категорий навыков */
+.skills-categories {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 1.5rem;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.skill-category {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-top: 3px solid #44a1b8;
+}
+
+.skill-category-title {
+    font-family: 'GostB';
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #333;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.skill-list {
+    margin-top: 0.5rem;
+}
+
+.skill-list li {
+    margin-bottom: 0.6rem;
+}
+
+@media (max-width: 768px) {
+    .skills-categories {
+        grid-template-columns: 1fr;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    
+    .experience-item {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    
+    .achievements-container {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    
+    .cta-section {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    
+    .blog-text-title {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    
+    .experience-position {
+        font-size: 1.6rem;
+    }
+    
+    .skill-category-title {
+        font-size: 1.5rem;
+    }
+}
+
+/* Стили для ключевых достижений */
+.achievements-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.achievement-item {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 4px solid #44a1b8;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.achievement-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.achievement-title {
+    font-family: 'GostB';
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #333;
+    margin-bottom: 0.8rem;
+}
+
+.achievement-description {
+    font-family: 'GostB';
+    font-size: 1.3rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Call-to-action стили */
+.cta-section {
+    background: linear-gradient(135deg, #44a1b8 0%, #2d7a8a 100%);
+    color: white;
+    padding: 3rem 2rem;
+    border-radius: 12px;
+    text-align: center;
+    margin: 3rem 10% 0 10%;
+}
+
+.cta-title {
+    font-family: 'PaluiFont';
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+.cta-text {
+    font-family: 'GostB';
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    color: white;
+    line-height: 1.6;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1.2rem 3rem;
+    background-color: white;
+    color: #44a1b8;
+    text-decoration: none;
+    border-radius: 8px;
+    font-family: 'GostB';
+    font-size: 1.5rem;
+    font-weight: 800;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+    background-color: #f8f9fa;
+}
+
+/* Стили для краткого резюме на главной */
+.quick-summary {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.summary-item {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 4px solid #44a1b8;
+    transition: transform 0.3s ease;
+}
+
+.summary-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.summary-title {
+    font-family: 'GostB';
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #44a1b8;
+    margin-bottom: 0.8rem;
+}
+
+.summary-text {
+    font-family: 'GostB';
+    font-size: 1.4rem;
+    color: #555;
+    line-height: 1.5;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .quick-summary {
+        grid-template-columns: 1fr;
+        margin-left: 5%;
+        margin-right: 5%;
     }
 }
